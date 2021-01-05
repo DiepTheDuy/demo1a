@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dtReport", "demo1a\dtReport
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dtReport-2", "dtReport-2\dtReport-2.csproj", "{3FE5F0C0-BD84-4A2B-86E7-68C119BCC64F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab05-Report", "Lab05-Report\Lab05-Report.csproj", "{B36BE7C1-A8A8-4C99-8A9C-6D84651E5446}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3FE5F0C0-BD84-4A2B-86E7-68C119BCC64F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FE5F0C0-BD84-4A2B-86E7-68C119BCC64F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FE5F0C0-BD84-4A2B-86E7-68C119BCC64F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B36BE7C1-A8A8-4C99-8A9C-6D84651E5446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B36BE7C1-A8A8-4C99-8A9C-6D84651E5446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B36BE7C1-A8A8-4C99-8A9C-6D84651E5446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B36BE7C1-A8A8-4C99-8A9C-6D84651E5446}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
