@@ -88,6 +88,7 @@
             this.msExit.Name = "msExit";
             this.msExit.Size = new System.Drawing.Size(180, 22);
             this.msExit.Text = "Thoát";
+            this.msExit.Click += new System.EventHandler(this.msExit_Click);
             // 
             // sảnPhẩmToolStripMenuItem
             // 
@@ -121,6 +122,7 @@
             this.cbShowAll.TabIndex = 1;
             this.cbShowAll.Text = "Xem tất cả trong tháng";
             this.cbShowAll.UseVisualStyleBackColor = true;
+            this.cbShowAll.CheckedChanged += new System.EventHandler(this.cbShowAll_CheckedChanged);
             // 
             // label1
             // 
@@ -138,6 +140,7 @@
             this.dtpStart.Name = "dtpStart";
             this.dtpStart.Size = new System.Drawing.Size(99, 20);
             this.dtpStart.TabIndex = 3;
+            this.dtpStart.ValueChanged += new System.EventHandler(this.dtpStart_ValueChanged);
             // 
             // dtpEnd
             // 
@@ -146,6 +149,7 @@
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(97, 20);
             this.dtpEnd.TabIndex = 4;
+            this.dtpEnd.ValueChanged += new System.EventHandler(this.dtpEnd_ValueChanged);
             // 
             // label2
             // 
@@ -173,6 +177,8 @@
             // 
             // dgvList
             // 
+            this.dgvList.AllowUserToAddRows = false;
+            this.dgvList.AllowUserToDeleteRows = false;
             this.dgvList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -182,6 +188,8 @@
             this.Total});
             this.dgvList.Location = new System.Drawing.Point(32, 140);
             this.dgvList.Name = "dgvList";
+            this.dgvList.ReadOnly = true;
+            this.dgvList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvList.Size = new System.Drawing.Size(716, 215);
             this.dgvList.TabIndex = 7;
             // 
@@ -232,6 +240,7 @@
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Thêm đơn hàng";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label3
             // 
@@ -244,9 +253,9 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Enabled = false;
             this.txtTotal.Location = new System.Drawing.Point(636, 364);
             this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(112, 20);
             this.txtTotal.TabIndex = 11;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -266,6 +275,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmQLDH";
             this.Text = "Quản Lý Đơn Hàng";
+            this.Load += new System.EventHandler(this.frmQLDH_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

@@ -18,7 +18,6 @@ namespace Lab05_Report.Subforms
         {
             InitializeComponent();
         }
-
         private void frmReportProduct_Load(object sender, EventArgs e)
         {
             String connectionString;

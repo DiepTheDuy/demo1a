@@ -18,6 +18,11 @@ namespace Lab05_Report.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Invoice>()
+                .HasMany(e => e.Orders)
+                .WithRequired(e => e.Invoice)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<Order>()
                 .Property(e => e.Price)
                 .HasPrecision(18, 0);
@@ -29,6 +34,11 @@ namespace Lab05_Report.Models
             modelBuilder.Entity<Product>()
                 .Property(e => e.SellPrice)
                 .HasPrecision(18, 0);
+
+            modelBuilder.Entity<Product>()
+                .HasMany(e => e.Orders)
+                .WithRequired(e => e.Product)
+                .WillCascadeOnDelete(false);
         }
     }
 }

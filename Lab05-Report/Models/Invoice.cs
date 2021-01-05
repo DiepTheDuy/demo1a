@@ -9,6 +9,12 @@ namespace Lab05_Report.Models
     [Table("Invoice")]
     public partial class Invoice
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Invoice()
+        {
+            Orders = new HashSet<Order>();
+        }
+
         [Key]
         [StringLength(20)]
         public string InvoiceNo { get; set; }
@@ -19,5 +25,8 @@ namespace Lab05_Report.Models
 
         [StringLength(255)]
         public string Note { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }
