@@ -48,6 +48,7 @@ namespace Lab05_Report.Subforms
             this.dgvThongTinSP = new System.Windows.Forms.DataGridView();
             this.Stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donvi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaMua = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -133,6 +134,9 @@ namespace Lab05_Report.Subforms
             // cbDVT
             // 
             this.cbDVT.FormattingEnabled = true;
+            this.cbDVT.Items.AddRange(new object[] {
+            "Hop",
+            "Cai"});
             this.cbDVT.Location = new System.Drawing.Point(121, 105);
             this.cbDVT.Name = "cbDVT";
             this.cbDVT.Size = new System.Drawing.Size(121, 21);
@@ -186,6 +190,7 @@ namespace Lab05_Report.Subforms
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "Tro lai";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnDelete
             // 
@@ -195,6 +200,7 @@ namespace Lab05_Report.Subforms
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Xoa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -204,18 +210,23 @@ namespace Lab05_Report.Subforms
             this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "Cap nhat";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // dgvThongTinSP
             // 
+            this.dgvThongTinSP.AllowUserToAddRows = false;
+            this.dgvThongTinSP.AllowUserToDeleteRows = false;
             this.dgvThongTinSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongTinSP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Stt,
             this.MaSP,
+            this.Column1,
             this.donvi,
             this.giaMua,
             this.giaBan});
             this.dgvThongTinSP.Location = new System.Drawing.Point(294, 92);
             this.dgvThongTinSP.Name = "dgvThongTinSP";
+            this.dgvThongTinSP.ReadOnly = true;
             this.dgvThongTinSP.Size = new System.Drawing.Size(544, 282);
             this.dgvThongTinSP.TabIndex = 8;
             this.dgvThongTinSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinSP_CellContentClick);
@@ -224,26 +235,37 @@ namespace Lab05_Report.Subforms
             // 
             this.Stt.HeaderText = "STT";
             this.Stt.Name = "Stt";
+            this.Stt.ReadOnly = true;
             // 
             // MaSP
             // 
             this.MaSP.HeaderText = "Ma san pham";
             this.MaSP.Name = "MaSP";
+            this.MaSP.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Ten san pham";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // donvi
             // 
             this.donvi.HeaderText = "DVT";
             this.donvi.Name = "donvi";
+            this.donvi.ReadOnly = true;
             // 
             // giaMua
             // 
             this.giaMua.HeaderText = "Gia mua";
             this.giaMua.Name = "giaMua";
+            this.giaMua.ReadOnly = true;
             // 
             // giaBan
             // 
             this.giaBan.HeaderText = "Gia ban";
             this.giaBan.Name = "giaBan";
+            this.giaBan.ReadOnly = true;
             // 
             // frmProduct
             // 
@@ -287,6 +309,7 @@ namespace Lab05_Report.Subforms
         private System.Windows.Forms.DataGridView dgvThongTinSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn donvi;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaMua;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaBan;
