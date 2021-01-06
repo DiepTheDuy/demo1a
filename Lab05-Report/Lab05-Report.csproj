@@ -121,6 +121,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportGiaoHang.rdlc" />
     <EmbeddedResource Include="ReportBaoGia.rdlc" />
     <EmbeddedResource Include="Subforms\Order.resx">
       <DependentUpon>Order.cs</DependentUpon>
